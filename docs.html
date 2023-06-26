@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		Harmony
+	</title>
+	<script src="https://kit.fontawesome.com/fd99052779.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="script.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="https://open.spotify.com/embed-podcast/iframe-api/v1" async></script>
+
+</head>
+<body>
+	<nav>
+		<a id="headerLogo" href="index.html">
+			<img src="Harmony-logo.svg">
+		</a>
+
+		<ul id="linksThatDontMatter"> <!--None of the links matter; nothing matters-->
+			<li><a href="#">Artists</a></li>
+			<li><a href="#">Albums</a></li>
+			<li><a href="docs.html">Documentation</a></li>
+		</ul>
+
+		<form id="search">
+			<input type="text" id="searchBar" placeholder=" Search albums and artists on Spotify" name="searchBar">
+			<button type="null"><i class="fa-solid fa-magnifying-glass fa-flip-horizontal" style="color: #1a4659;"></i></button>
+		</form>
+
+	<a href="#" id="signIn">
+			<i class="fa-regular fa-circle-user" style="color: #ffffff;"></i>
+			<br>
+			Sign in
+	</a>
+	</nav>
+
+	<div id="sections" style="max-height: 80vh;">
+		<section id="designProcess">
+			<h2>The following is taken directly from the documentation writeup submitted to Canvas</h2>
+
+			<h3>Brainstorm</h3>
+			<p>A few weeks before this project began, I had a realization that left me feeling a bit depressed. I was listening to my favorite album for the first time in a while on Spotify, and for some reason that particular week it was all I wanted to listen to in the car or at work. I must have played that album a few hundred times before I got tired of it. The realization came when I finally grew tired of listening to the same music for a week straight, but realized no other music really hit the same spot. <br><br>
+
+			At this point I started searching for a website that would generate new music recommendations with embedded Spotify links. I pretty quickly found what I was looking for but I felt that because the recommendations it generated were picked by an algorithm, that it ultimately wouldn’t satisfy what I wanted. While I’m sure not everyone can relate to the scenario, I’m sure wanting to discuss and share music with others is something a lot of people would get a lot of use out of.</p>
+
+			<h3>Identify</h3>
+			<p>Obviously the scope of what I’ve outlined is more than I can manage for just one 6 week project, but from the beginning I had a lot of faith in the concept and still think it could provide value to people other than myself, so I settled on a proof of concept.<br><br>
+
+			I made a list of features that my site would need before I considered it ready to show off. I plan to use this project not only as a showcase of my own skills, but also as a starting point to show to other developers and gauge their interest to see if it’s worth putting more time into once this class has wrapped up. The features I want are:
+
+			<ol>
+				<li>An elegant user interface that displays lots of information in a way anyone can understand</li>
+				<li>A functional search bar that populates with search results pulled directly from Spotify</li>
+				<li>A page that displays a full detailed view of the album or artist the user searches for</li>
+			</ol>
+
+			Now that I am actually looking at these criteria listed they seem a lot smaller, but having already started on this project, I think I may have already bitten off more than I could chew. The 3rd item is especially tricky because I can think of a few solutions to this that are simple but will all require some degree of smoke and mirrors to realize. Based on how effective my solution is I may have to demonstrate the final project in a very scripted way which I would like to avoid if possible.
+			</p>
+
+			<h3>Define</h3>
+			<p>
+			This is where I began to realize I may have created a bigger challenge for myself than I had hoped. It’s also where the milestones became less clear. Initially, my roadmap looked something like
+
+			<ol>
+				<li>Create a wireframe that could be easily converted into semantic HTML so that I could spend as little time writing markup as possible and focus on the functionality</li>
+				<li>Build the Spotify searchbar and replace the one in my wireframe with the one I built</li>
+				<li>Build the full detail page</li>
+				<li>Write a script to populate the full details page with Spotify data</li>
+			</ol>
+
+			But once I began reading Spotify’s API documentation and learning about Javascript libraries it slowly became apparent that it wouldn’t be that simple. The first hitch in my plan came when I built the wireframe though. The plugin that I used to convert the wireframe into HTML was a far more robust tool than I had imagined and, deciding that learning it would likely be just as much work as writing the page by hand, I began writing the page by hand. I’ve been writing HTML and CSS for years though, so it mercifully didn’t take as much time as I expected it would. I created a nav bar that could be used across the whole site in just a few hours. I think it even looks better than the one in the wireframe, amazingly. <br><br>
+
+			At this point I started on the programming side of things, and this is where the project became messy. Most of the Spotify API tutorials made their API calls using a library called React. As I began learning React it slowly started to become more apparent that this should have been the starting point. One of React’s core features is the way that it displays HTML in your browser. Normally, a web browser sends a request to the host server for a webpage, the server sends the HTML to your computer, and your browser displays it. What React does is run a light program that tells your browser to generate the HTML within the browser instead of requesting it from a server. What this means is that I may not even be able to use a bulk of the HTML I already hand wrote. Had I known this was the case, I wouldn’t have done things in this order, but at least now I know for future reference. I really hope parts of the nav menu I created are still salvageable, otherwise I will have to rewrite them using a library that I don’t understand very well.
+			</p>
+
+			<h3>Ideate</h3>
+			<p>
+			That brings us to right now. I don’t yet have another “sketch” for how I’m going to approach the final version, but given some time to familiarize myself with the tools I’m using and think about how best to use the material I’ve already created, I’m fairly certain that whatever I put together will satisfy all of my requirements. My biggest roadblocks with this project have come from wanting to force myself out of my comfort zone and I'm realizing now I may have gone too far in that aspect and am now discovering that I’m going to have to keep building and ideating while also patching holes as they appear. Overall, while I am in over my head, I’m still optimistic that this site will look how it’s supposed to when I am ready to show it.
+			</p>
+
+			<h3>Prototype</h3>
+			<p>
+			As I continued working on the search functionality, my project goals began to shift. I was frequently running into bugs in my code that I didn’t know how to resolve because of how unfamiliar I was with React. I had enlisted the help of some friends who are programmers to help me debug, and while I got certain parts of the app working, as I would fix one issue, two more would pop up. I was having problems with React, Javascript, and Spotify’s API all at once and would have a hard time knowing where to find answers, especially since documentation for these things is written for experienced web developers, not someone working on a hands-on learning project. In some cases the bugs weren’t even bugs, but things that required a more refined approach that I just didn’t have yet. As the deadline approached, it became obvious that I needed to start making some decisions about how the final product would look.
+			</p>
+
+			<h3>Test</h3>
+			<p>
+			My draft was received well in peer reviews, but I heard no mention of the technical aspects of the project which is what has me really stressed. Once I had the app stable enough to test, I began checking that everything worked. I had already written up an HTML page that I intended to use as a “shell” for the app, so all of my testing focused on the app itself, which in its current state was just a login button and a search bar. Those two things on their own aren’t all too impressive, but they were the first login button and search bar I had ever made that actually worked as intended. The login I was especially proud of. It uses your existing Spotify account to log you in and allow you to access the search feature. I didn’t even intend to create a login at first, but since Spotify’s API requires users to have a security token tied to their account, I had to spend time building one. <br><br>
+
+			That leaves the search bar, which I worked on for the longest out of anything. I successfully managed to write code that would take a search term, pass it to Spotify, get the results of that search term, and return it to the user. The problem with this is that the API requires you specify what the search term is actually for so it knows what to return. I really wanted my search bar to be able to display albums and artists both, however making both of these calls at once caused issues. Not to mention that while I was successfully getting the search results back, Spotify’s database keeps a ton of data for every artist, song, album and playlist, and a request for any of those things will return all of the data associated with it, not just the part you need. I have never in my life had to parse a data structure before, and this turned out to be a huge problem. Going into the browser console I was able to look around through the data, and see that it was in fact returning a list of albums with the search term I had entered, related items, and much more. Rendering them on the page was still too difficult in the end though, and this is where I feel I made the most important decision in this project.
+			</p>
+
+			<h3>Refine</h3>
+			<p>
+			Over the course of my testing, I spent a few days coming to terms with the idea of restructuring my goals for the project. I still wanted something I could show off. I wrote all this code in React that I didn’t want to go to waste. I had a design that I was really proud of, and an idea I had a lot of faith in. It was at this point I decided that I was going to compile all the best parts of what I had worked on into a technical showcase that would still justify the proof of concept, even if the moving parts didn’t actually move. <br><br>
+
+			I began putting more time into the HTML and CSS of the project, since I hadn’t touched them since before I had started on the React script. All I had was a navigation bar that I had built for the homepage. I began building out the rest of the homepage, and with less focus placed on functionality, I wanted to make this layout shine as much as possible. I was very careful to keep my markup files clean and labeled well, and make sure everything was aesthetically pleasing and made sense from a UI perspective. In particular I spent a lot of time working on an animation for the new “documentation” link on the navigation bar. I did this because I wanted to call attention to it, not just for the sake of presenting it for this class, but to give significance to the parts of the project that had to be stripped down to get it done on time. As of this writing, I haven’t built the documentation page yet, as I intend to use this document as a template for what I will show, as well as include screenshots and detailed descriptions of what I made.<br><br>
+
+			I also spent a good deal of time polishing several things like the horizontal navigation seen on the homepage. Right now, most browsers generally agree on how content should be displayed by default, however, there are still some major differences, and one of the big ones is scroll bars. I wasn’t going to settle on a default scroll bar, and I think this alone took me a few hours. Firefox (the browser I use for testing) allows for the styling of scrollbars just like any other element, however Chrome requires that you alter the browser’s webkits. These are rules that the browser puts in place so that if any part of the CSS fails to load, the browser has a backup style that it can use instead. For some reason scrollbars in Chrome are only editable via these webkits, and targeting them takes a pretty advanced familiarity with CSS.<br><br>
+
+			The last thing I worked on was the album information page. The more I thought about it, the more I decided that this feature didn’t need to be relegated to its own page, and that it would probably look better and have improved functionality if it was included as part of the homepage. In all I spent about a day working on a text box that would open when an album from the homepage was selected. Surprisingly, this did actually require some use of the Spotify API, so the search bar I built actually proved to be a productive use of my time after all. I wrote a small script that would take the link that the user clicked on, find the album or playlist it corresponds to, and render that to the page, as well as handling some other functionality like toggle buttons and the opening and closing of the overlay. I was really proud of this. The deadline is 3 days away, and even though the project doesn’t look like what I envisioned, I’m still really confident in what I created.
+			</p>
+
+			<h3>Implementation</h3>
+			<p>
+			At this point, the last few pieces of the project have fallen into place. Most of my work right now is making small aesthetic adjustments and trying to make the final as presentable as possible. I think my workflow on this project has been really smooth despite having massive hurdles to overcome. The design process, wireframing, building of the pages, styling, and scripting (aside from the React script) all went as well as I could have hoped for. While the process of implementing some functionality didn’t go well at all, I’m still comfortable including it in the project, as I think it demonstrates an adaptability in my work and proves that failing upwards is still a productive use of your resources. I’m confident that having followed enough tutorials and read enough documentation, I’ll be building scripts that make all kinds of API calls knowing what I do now.
+			</p>
+		
+		</section>
+		<section id="progress">
+			<h2>These are screenshots and descriptions of some of the things discussed in the documentation writeup</h2>
+
+			<p>This is the wireframe I created when I envisioned the project. It's a lot rougher than the final version because it's hard to tell how things will scale.<br><br>
+
+			I initially wanted the album view on the right to be its own page but I condensed this down to a popup on the main page because I think it looks better.
+			</p>
+
+			<img src="wireframe.png" alt="The site's wireframe">
+
+			<p>I used the opportunity of building this wireframe to shamelessly promote my favorite album. This is also the album that is loaded by default in the modular album view on the homepage, however you won't see it because of a script that replaces it with the album the user selects.</p>
+
+			<img src="script.png" alt="A screenshot of the Javascript file this site is running">
+
+			<p>Here is the entire script I wrote. This script handles all the functionality of the site, including opening and closing the modal album view, rendering the correct album to the page, and a bit of script that toggles the "add to favorites" button.</p>
+
+			<p>Speaking of scripts, here is a brief demo of the React script which handles the search feature. <br><br>
+
+			<img src="react1.png" alt="A screenshot of the React app without logging in">
+
+			<p>This is what the user sees when they first open the app. <br><br>
+
+			Clicking "log into Spotify" takes you to Spotify's login page where you can enter your credentials to use the app</p>
+
+			<img src="react2.png" alt="A screenshot of the app redirecting to Spotify’s login page">
+
+			<p>After that you can enter a search term which will send an API call to Spotify.</p>
+
+			<img src="react3.png" alt="A demonstration of the search feature inside the browser console">
+
+			<p>Here I've entered a search term. On the right you can see the browser console, where the API response is logged. Object > data > albums > items is an array in which 20 albums from Spotify's database are stored. Parsing that data proved to be too big a challenge which is why the search bar on the main page doesn't actually search anything.</p>
+
+			<p>The last thing I want to touch on is the animation I created for the main page</p>
+
+			<img src="keyframes.png" alt="A list of keyframes in this site's CSS file">
+
+			<p>Since I scrapped a feature, I wanted to make up for it by including a page that showed the challenges I went through and my thinking when building this project (that's this page). Since the links on the navbar are decorative though, I needed a way to denote that the "documentation" link is important, so I solved this problem by including an animation.<br><br>
+
+			There are tools that allow you to visually create an animation which can be copied and pasted into your CSS. I was having a hard time with these though, so I only used them as a starting point to guide the animation, before writing the whole thing by hand. The last two keyframes here are actually just to delay the animation looping so it doesn't get annoying, which for some reason you can't do with basic CSS.</p>
+		</section>
+	</div>
+
+	<footer>
+		<p>Created by Kristofer Zykowski</p>
+		<p>For educational purposes only</p>
+	</footer>
+
+</body>	
+</html>

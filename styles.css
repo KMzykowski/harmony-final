@@ -1,0 +1,391 @@
+@import url('https://fonts.cdnfonts.com/css/neue-kabel');
+
+body{
+	font-family: neue kabel;
+	background-image: linear-gradient(#ffffff , #6EAD9C , #1A4659);
+	background-size: 100vw 100vh;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	position: absolute;
+	width: 100%;
+	overflow-x: hidden;
+}
+
+/*Navbar global styles*/
+	nav{
+		width: 100%;
+		background: #1A4659;
+		position: fixed;
+		top: 0;
+		left: 0;
+		display: inline-grid;
+		grid-template-columns: auto auto auto auto;
+		padding: 1% 2% 0.5% 2%;
+		z-index: 3;
+	}
+	/*Nav logo*/
+		#headerLogo{
+			width: 70%;
+			filter: invert(100%);
+		}
+	/*Nav logo*/
+	/*Nav links*/
+		#linksThatDontMatter li{
+			display: inline;
+			margin-left: 5%;
+		}
+
+		#linksThatDontMatter a{
+			color: white;
+			text-decoration: none;
+			font-size: 1em;
+		}
+	/*Nav links*/
+	/*Searchbar (what a pain)*/
+		#search{
+			display: relative;
+			margin-top: 1%;
+		}
+
+		#searchBar{
+			border-radius: 20px;
+			border: none;
+			font-size: 1.5em;
+			width: 500px;
+		}
+
+		#search button{
+			position: absolute;
+			margin-left: -30px;
+			background: none;
+			border: none;
+			cursor: pointer;
+			height: 2.5em;
+		}
+
+		#search i{
+			font-size: 1.5em;
+		}
+	/*Searchbar*/
+	/*Sign In*/
+		#signIn{
+			text-align: center;
+			color: white;
+			text-decoration: none;
+		}
+	/*Sign In*/
+
+	/*TODO: ANIMATIONS*/
+		.animatedLink{
+			animation: heartbeat 10s infinite;
+			animation-delay: 5s;
+		}
+/*Navbar global styles*/
+
+/*Footer global styles*/
+	footer{
+		background: #1A4659;
+		width: 100%;
+		margin-left: -9px;
+		margin-top: 5%;
+		padding-top: 10px;
+		text-align: center;
+		padding-bottom: 20px;
+		color: white;
+	}
+/*Footer global styles*/
+
+/*Homepage*/
+#heroImage{
+	margin-top: 6%;
+	text-align: center;
+	background-image: url(bg_bggenerator_com.png);
+	max-width: 60%;
+	color: white;
+	padding: 5%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#heroImage h2{
+	font-weight: 100;
+}
+
+.about{
+	text-align: center;
+	font-weight: 500;
+}
+
+.about a{
+	color: black;
+}
+
+
+	/*Album carousels*/
+		section{
+			margin-top: 50px;
+			margin-left: auto;
+			margin-right: auto;
+			width: 70%;
+		}
+
+
+		#newAndPopular{
+			margin-top: 2%;
+		}
+
+		.carousel{
+			display: block;
+			overflow-x: scroll;
+			white-space: nowrap;
+			scrollbar-color: #286b8a #c4e1ee;
+			scrollbar-width: thin;
+			background: #1A4659;
+			padding-top: 5px;
+			border-radius: 10px;
+		}
+
+		.carousel::-webkit-scrollbar {
+			width: auto;
+			height: 5px;
+
+			/*I hate chrome's stupid dumb webkits why can't they work the same as firefox........*/
+		}
+
+		.carousel::-webkit-scrollbar-track {
+			background: #c4e1ee;
+			border-radius: 5px;
+			margin-top: 10px;
+		}
+
+		.carousel::-webkit-scrollbar-thumb {
+			background: #286b8a;
+			border-radius: 5px;
+			margin-top: 10px;
+		}
+
+		.album{
+			display: inline-block;
+			margin-left: 10px;
+		}
+
+		.album a{
+			display: block;
+			text-align: center;
+			color: white;
+			padding-bottom: 10px;
+		}
+
+		.album a i{
+			padding-left: 10px;
+		}
+
+	/*Album carousels*/
+
+	/*Album view*/
+		#modalBox{
+			visibility: hidden;
+			background: #1A4659;
+			max-width: 80%;
+			display: block;
+			border-radius: 10px;
+			padding: 20px;
+			z-index: 2;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 10%;
+			margin: 0 auto;
+			box-shadow: 3px 3px 5px black;
+		}
+
+		#modalBox span{
+			float: right;
+		}
+
+		#reviews{
+			width: 48%;
+			float: right;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			column-gap: 10px;
+			padding: 10px;
+		}
+
+		.review{
+			height: 150px;
+			overflow: hidden;
+			background: white;
+			border-radius: 5px;
+			padding: 5px;
+			padding-left: 10px;
+			padding-right: 10px;
+			margin-top: 40px;
+		}
+
+		#reviews [type="checkbox"]{
+			display: none;
+		}
+
+		#reviews input, #reviews label{
+			background: #286b8a;
+			color: #c4e1ee;
+			position: absolute;
+			text-align: center;
+			border-radius: 5px;
+			padding: 5px;
+			font-size: 1em;
+			font-weight: 500;
+		}
+
+		.showMore:checked ~ .review{
+			overflow: visible;
+			height: fit-content;
+		}
+
+		.favorite{
+			display: inline;
+			margin-left: 154px;
+			margin-top: 10px;
+			position: absolute;
+			background: #286b8a;
+			color: #c4e1ee;
+			padding: 5px;
+			border: none;
+			border-radius: 5px;
+			font-size: 1em;
+			font-weight: 500;
+		}
+
+		#postReview{
+			width: 300%;
+		}
+
+		#modalBox h6{
+			color: white;
+			font-size: 2em;
+			color: white;
+		}
+
+		#modalBox textarea{
+			word-wrap: soft;
+			width: 69%;
+			height: 200px;
+			margin-top: -70px;
+			border-radius: 5px;
+		}
+
+		.postReviewBtn{
+			display: block;
+			width: 70%;
+			background: #286b8a;
+			color: #c4e1ee;
+			padding: 5px;
+			border: none;
+			border-radius: 5px;
+			font-size: 1em;
+			font-weight: 500;
+		}
+	/*Album view*/
+/*Homepage*/
+
+/*Docs page*/
+
+	#sections{
+		margin-top: 2%;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-column-gap:80px;
+	}
+
+	#designProcess{
+		width: 100%;
+		max-height: 78vh;
+		background: white;
+		border-radius: 5px;
+		padding: 20px;
+		grid-column: 2;
+		overflow-y: scroll;
+		scrollbar-color: #286b8a #c4e1ee;
+		scrollbar-width: thin;
+	}
+
+	#progress{
+		width: 100%;
+		max-height: 78vh;
+		background: white;
+		padding: 20px;
+		border-radius: 5px;
+		grid-column: 3;
+		overflow-y: scroll;
+		scrollbar-color: #286b8a #c4e1ee;
+		scrollbar-width: thin;
+	}
+
+	#progress img{
+		width: 100%;
+	}
+
+	#designProcess::-webkit-scrollbar , #progress::-webkit-scrollbar {
+		width: auto;
+		height: 5px;
+	}
+
+	#designProcess::-webkit-scrollbar-track , #progress::-webkit-scrollbar-track {
+		background: #c4e1ee;
+		border-radius: 5px;
+		margin-top: 10px;
+	}
+
+	#designProcess::-webkit-scrollbar-thumb , #progress::-webkit-scrollbar-thumb {
+		background: #286b8a;
+		border-radius: 5px;
+		margin-top: 10px;
+	}
+
+
+/*Docs page*/
+
+/*Animation*/
+@keyframes heartbeat {
+	/*The fact that you cant add a delay AFTER your animations is so dumb*/
+	0%{
+		font-size: 100%;
+		text-shadow: none;
+	}
+
+	1%{
+		font-size: 106%;
+	}
+
+	5%{
+		font-size: 115%;
+		text-shadow: 1px 0px 5px orange;
+	}
+
+	8%{
+		font-size: 92%;
+		animation-timing-function: ease-out;
+	}
+
+	10%{
+		font-size: 115%;
+		text-shadow: none;
+		text-shadow: 1px 0px 8px orange;
+		
+	}
+
+	12%{
+		font-size: 100%;
+	}
+
+	50%{
+		text-shadow: none;
+	}
+
+	100%{
+		font-size: 100%;
+	}
+}
+/*Animation*/
